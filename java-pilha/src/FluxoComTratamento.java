@@ -1,4 +1,4 @@
-public class Fluxo {
+public class FluxoComTratamento {
 
     public static void main(String[] args) {
         System.out.println("Ini do main");
@@ -23,13 +23,12 @@ public class Fluxo {
 
     private static void metodo2() {
         System.out.println("Ini do metodo2");
-        
-        //Criando uma execeção
-        //Quando criada deve ser atribuida uma mensagem em seu constructor, se não será definida como null
-        ArithmeticException ae = new ArithmeticException("Deu errado");
-        //Lançando, jopgando a exeção no código
-        throw ae;
-        
-//        System.out.println("Fim do metodo2");
+        for(int i = 1; i <= 5; i++) {
+            System.out.println(i);
+//            int a = i / 0;
+            Conta c = null;
+            c.deposita();
+        }
+        System.out.println("Fim do metodo2");
     }
 }
