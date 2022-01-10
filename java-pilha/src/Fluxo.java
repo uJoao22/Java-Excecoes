@@ -4,7 +4,7 @@ public class Fluxo {
         System.out.println("Ini do main");
         try {
 	        metodo1();
-	    } catch(ArithmeticException | NullPointerException ex) {
+	    } catch(ArithmeticException | NullPointerException | MinhaException ex) {
 	    	//Resgatando a mensagem de erro dada pela execeção
 	    	String msg = ex.getMessage();
 	    	System.out.println("Exception " + msg);
@@ -24,11 +24,8 @@ public class Fluxo {
     private static void metodo2() {
         System.out.println("Ini do metodo2");
         
-        //Criando uma execeção
-        //Quando criada deve ser atribuida uma mensagem em seu constructor, se não será definida como null
-        ArithmeticException ae = new ArithmeticException("Deu errado");
         //Lançando, jopgando a exeção no código
-        throw ae;
+        throw new MinhaException("Deu muito errado");
         
 //        System.out.println("Fim do metodo2");
     }
