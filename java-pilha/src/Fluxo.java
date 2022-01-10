@@ -16,7 +16,11 @@ public class Fluxo {
         System.out.println("Ini do metodo2");
         for(int i = 1; i <= 5; i++) {
             System.out.println(i);
-            int a = i / 0;
+            try {
+            	int a = i / 0;
+            } catch(ArithmeticException ex) {
+            	System.out.println("Não é possível fazer divisão por 0");
+            }
         }
         System.out.println("Fim do metodo2");
     }
