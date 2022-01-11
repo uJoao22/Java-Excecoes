@@ -5,9 +5,11 @@ public class TesteSaca {
 		
 		conta.deposita(200);
 		
-		conta.saca(210);
-		
-		System.out.println(conta.getSaldo());
+		try {
+			conta.saca(210);
+		} catch(SaldoInsuficienteException ex) {
+			System.out.println(ex.getMessage());
+		}
 	}
 	
 }

@@ -8,7 +8,11 @@ public class TesteContas {
 		ContaPoupanca cp = new ContaPoupanca(222, 222);
 		cp.deposita(200);
 		
-		cc.transfere(10.0, cp);
+		try {
+			cc.transfere(10.0, cp);
+		} catch (SaldoInsuficienteException e) {
+			e.printStackTrace();
+		}
 		
 		System.out.println(cc.getSaldo());
 		System.out.println(cp.getSaldo());
